@@ -88,7 +88,7 @@ const Home = () => {
             {/* Section Fasilkom Student Organizations */}
             <div id="organizations" className="flex flex-col mb-10 justify-center text-center items-center py-10 px-16 sm:px-16 md:px-16">
                 <h1 className="text-gray-950 font-semibold text-2xl mb-8">Fasilkom Student Organizations</h1>
-                <div className="w-full mx-auto flex justify-center items-center overflow-x-hidden">
+                <div className="w-full mx-auto flex justify-center items-center mb-10 overflow-x-hidden">
                     <ListOrganization/>
                 </div>
             </div>
