@@ -1,5 +1,6 @@
 import ListNewsStudent from "../components/ListNewsStudent";
 import ListNewsInfo from "../components/ListNewsInfo";
+import ListOrganization from "../components/ListOrganization";
 import { NavLink } from "react-router-dom";
 
 const Home = () => {
@@ -82,8 +83,11 @@ const Home = () => {
             </div>
 
             {/* Section Fasilkom Student Organizations */}
-            <div id="organizations" className="flex flex-col justify-center items-center py-10">
+            <div id="organizations" className="flex flex-col justify-center items-center py-10 px-16 sm:px-16 md:px-16">
                 <h1 className="text-gray-950 font-semibold text-2xl mb-8">Fasilkom Student Organizations</h1>
+                <div className="flex justify-center items-center overflow-x-hidden">
+                    <ListOrganization/>
+                </div>
             </div>
         </section>
     );
