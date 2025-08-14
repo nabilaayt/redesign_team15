@@ -12,7 +12,7 @@ const ListNewsInfo = () => {
             id: 2,
             title: "Registrasi Acara Pelepasan Alumni Fakultas Ilmu Komputer Universitas Sriwijaya ke-74",
             category: "Kemahasiswaan & Kerjasama",
-            images: "/assets/logo-unsri.png"
+            images: "/assets/logo/logo-unsri.png"
         },
         {
             id: 3,
