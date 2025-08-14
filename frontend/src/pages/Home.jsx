@@ -1,3 +1,6 @@
+import ListNewsStudent from "../components/ListNewsStudent";
+import ListNewsInfo from "../components/ListNewsInfo";
+
 const Home = () => {
     return(
         <section id="home" className="relative w-full min-h-screen font-poppins -mt-26">
@@ -36,15 +39,19 @@ const Home = () => {
                 </div>
             </div>
 
+            {/* Section News Information */}
             <div id="new-information" className="px-16 py-10 flex flex-col">
-                <h1 className="text-gray-950 font-semibold text-2xl">News Information</h1>
+                <h1 className="text-gray-950 font-semibold text-2xl mb-8">News Information</h1>
+                <ListNewsStudent />
             </div>
 
+            {/* Section Student Affairs & Partnership */}
             <div id="student-partnership" className="px-16 py-10 flex flex-col">
-                <h1 className="text-gray-950 font-semibold text-2xl">Student Affairs & Partnerships</h1>
+                <h1 className="text-gray-950 font-semibold text-2xl mb-8">Student Affairs & Partnerships</h1>
+                <ListNewsInfo />
             </div>
         </section>
     );
-}
+};
 
 export default Home;
