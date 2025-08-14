@@ -16,7 +16,7 @@ const Navbar = () => {
             <div className="flex flex-wrap items-center justify-center md:justify-between px-4 sm:px-8 lg:px-16 py-3 gap-y-4 gap-x-6">
                 <div className="flex items-center gap-5 py-1">
                     <img 
-                        src="/assets/logo-unsri.png" 
+                        src="/assets/logo/logo-unsri.png" 
                         alt="Logo UNSRI" 
                         className="w-14 h-full"
                     />
@@ -28,14 +28,12 @@ const Navbar = () => {
 
                 <ul className="hidden lg:flex font-normal gap-10 text-base">
                     <li className="transition-all text-gray-500 cursor-pointer hover:text-amber-400 hover:font-medium hover:underline hover:underline-offset-6">
-                        <NavLink to={"/"}
-                        >
+                        <NavLink to={"/"}>
                             Home
                         </NavLink>
                     </li>
                     <li className="transition-all text-gray-500 cursor-pointer hover:text-amber-400 hover:font-medium hover:underline hover:underline-offset-6">
-                        <NavLink to={"/profile"}
-                        >
+                        <NavLink to={"/profile"}>
                             Profile
                         </NavLink>
                     </li>
