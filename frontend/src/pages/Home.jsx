@@ -42,19 +42,19 @@ const Home = () => {
             </div>
 
             {/* Section News Information */}
-            <div id="newInformation" className="px-16 py-10 flex flex-col">
+            <div id="newInformation" className="px-16 py-10 mb-10 flex flex-col">
                 <h1 className="text-gray-950 font-semibold text-2xl mb-8">News Information</h1>
                 <ListNewsStudent />
             </div>
 
             {/* Section Student Affairs & Partnership */}
-            <div id="studentPartnership" className="px-16 py-10 flex flex-col">
+            <div id="studentPartnership" className="px-16 py-10 mb-10 flex flex-col">
                 <h1 className="text-gray-950 font-semibold text-2xl mb-8">Student Affairs & Partnerships</h1>
                 <ListNewsInfo />
             </div>
 
             {/* Section Profile Video */}
-            <div id="profileVideo" className="px-16 py-10 md:flex-row flex flex-col gap-10">
+            <div id="profileVideo" className="px-16 py-10 mb-10 md:flex-row flex flex-col gap-10">
                 <div className="flex-[1.5] aspect-video rounded-xl overflow-hidden shadow-lg">
                     <iframe
                             width="100%"
@@ -83,9 +83,9 @@ const Home = () => {
             </div>
 
             {/* Section Fasilkom Student Organizations */}
-            <div id="organizations" className="flex flex-col justify-center items-center py-10 px-16 sm:px-16 md:px-16">
+            <div id="organizations" className="flex flex-col mb-10 justify-center items-center py-10 px-16 sm:px-16 md:px-16">
                 <h1 className="text-gray-950 font-semibold text-2xl mb-8">Fasilkom Student Organizations</h1>
-                <div className="flex justify-center items-center overflow-x-hidden">
+                <div className="w-full mx-auto flex justify-center items-center overflow-x-hidden">
                     <ListOrganization/>
                 </div>
             </div>
