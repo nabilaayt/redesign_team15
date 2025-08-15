@@ -14,7 +14,7 @@ const Home = () => {
                 alt="Gedung Fasilkom UNSRI Indralaya" 
                 className="absolute top-0 right-0 w-full sm:-4/5 md:w-3/5 lg:-2/5 h-auto object-cover"
             />
-            <div className="relative z-10 flex flex-col px-16 sm:px-16 md:px-16 py-20 pt-40 max-w-4xl">
+            <div className="relative z-10 flex flex-col px-6 sm:px-16 md:px-16 py-10 pt-40 max-w-4xl">
                 <div className="flex items-center gap-2 mb-3">
                     <span className="w-6 h-1 bg-gray-950"></span>
                     <span className="text-gray-800 text-sm sm:text-base">“Berintegritas dan berjiwa technopreunership”</span>
@@ -45,19 +45,19 @@ const Home = () => {
             </div>
 
             {/* Section News Information */}
-            <div id="newInformation" className="px-16 py-10 mb-10 flex flex-col">
+            <div id="newInformation" className="px-6 sm:px-16 md:px-16 py-10 mb-10 flex flex-col">
                 <h1 className="text-gray-950 font-semibold text-2xl mb-8">News Information</h1>
                 <ListNewsStudent />
             </div>
 
             {/* Section Student Affairs & Partnership */}
-            <div id="studentPartnership" className="px-16 py-10 mb-10 flex flex-col">
+            <div id="studentPartnership" className="px-6 sm:px-16 md:px-16 py-10 mb-10 flex flex-col">
                 <h1 className="text-gray-950 font-semibold text-2xl mb-8">Student Affairs & Partnerships</h1>
                 <ListNewsInfo />
             </div>
 
             {/* Section Profile Video */}
-            <div id="profileVideo" className="px-16 py-10 mb-10 md:flex-row flex flex-col gap-10">
+            <div id="profileVideo" className="px-6 sm:px-16 md:px-16 py-10 mb-10 md:flex-row flex flex-col gap-10">
                 <div className="flex-[1.5] aspect-video rounded-xl overflow-hidden shadow-lg">
                     <iframe
                             width="100%"
@@ -86,7 +86,7 @@ const Home = () => {
             </div>
 
             {/* Section Fasilkom Student Organizations */}
-            <div id="organizations" className="flex flex-col mb-10 justify-center text-center items-center py-10 px-16 sm:px-16 md:px-16">
+            <div id="organizations" className="flex flex-col mb-10 justify-center text-center items-center py-10 px-6 sm:px-16 md:px-16">
                 <h1 className="text-gray-950 font-semibold text-2xl mb-8">Fasilkom Student Organizations</h1>
                 <div className="w-full mx-auto flex justify-center items-center mb-10 overflow-x-hidden">
                     <ListOrganization/>
