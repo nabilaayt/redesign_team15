@@ -10,6 +10,8 @@ import (
 func main() {
 	config.InitEnv()
 	database.DBinit()
+	database.DBMigrate()
+	
 	app := fiber.New()
 
 	app.Listen(":8080")

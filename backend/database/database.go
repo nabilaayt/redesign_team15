@@ -3,9 +3,9 @@ package database
 import (
 	"fmt"
 	"os"
-
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
+	"team15gdg/models"
 )
 
 var DB *gorm.DB
@@ -25,4 +25,13 @@ func DBinit() {
 
 	fmt.Println("Database connection success")
 	DB = db
+}
+
+func DBMigrate() {
+	if err := DB.AutoMigrate(&models.BeritaBaru{}); 
+	err != nil {
+		fmt.Println("Failed to migrate", err)
+	}
+
+	fmt.Println("Database migration success")
 }
