@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const Footer = () => {
     return(
         <footer className="bg-amber-400 pt-18 font-poppins">
-            <div className="flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap px-6 sm:px-16 lg:px-16 gap-10 lg:gap-20">
+            <div className="flex flex-col lg:flex-row lg:justify-between px-6 sm:px-16 lg:px-16 gap-10 lg:gap-0">
                 <div className="flex flex-col pr-8 gap-5">
                     <div className="flex flex-row gap-5">
                         <img 
@@ -45,7 +45,7 @@ const Footer = () => {
                         </p>
                     </div>
                 </div>
-                <div className="flex flex-col pr-16 xl:pl-10 lg:pl-34 gap-5">
+                <div className="flex flex-col xl:pl-10 lg:pl-45 gap-5">
                     <h3 className="text-2xl font-medium text-white">Navigation</h3>
                     <ul className="flex flex-col gap-4">
                         <li className="text-white text-lg hover:font-medium">
