@@ -18,7 +18,7 @@ const Profile = () => {
             </div>
 
             {/* Section About Us */}
-            <div className="flex flex-col lg:flex-row px-16 sm:px-10 md:px-16 py-10 gap-8 lg:gap-16">
+            <div className="flex flex-col lg:flex-row px-6 sm:px-10 md:px-16 py-10 gap-8 lg:gap-16">
                 <div className="flex-shrink-0 lg:w-1/3">
                     <h3 className="text-amber-400 font-medium text-lg sm:text-xl mb-2">About Us</h3>
                     <h1 className="text-gray-950 font-semibold text-2xl sm:text-3xl lg:text-4xl leading-tight">Program Studi Fakultas Ilmu Komputer</h1>
@@ -40,7 +40,7 @@ const Profile = () => {
             </div>
 
             {/* Section Visi */}
-            <div className="flex flex-col px-16 py-10 mb-6 gap-3 justify-center items-center">
+            <div className="flex flex-col px-6 sm:px-16 md:px-16 py-10 mb-6 gap-3 justify-center items-center">
                 <h1 className="relative text-gray-950 font-semibold text-center text-2xl mb-8 
                             after:content-[''] after:block after:h-1 after:w-32 after:bg-amber-400 after:mt-2 after:mx-auto">
                     Visi
@@ -51,7 +51,7 @@ const Profile = () => {
             </div>
 
             {/* Section Misi */}
-            <div className="flex flex-col px-16 py-10 gap-3 mb-10 justify-center items-center min-h-screen">
+            <div className="flex flex-col px-6 sm:px-16 md:px-16 py-10 gap-3 mb-10 justify-center items-center min-h-screen">
                 <h1 className="relative text-gray-950 font-semibold text-center text-2xl mb-8 
                             after:content-[''] after:block after:h-1 after:w-32 after:bg-amber-400 after:mt-2 after:mx-auto">
                     Misi
@@ -91,7 +91,7 @@ const Profile = () => {
             </div>
 
             {/* Section Programs, Students, & Alumni */}
-            <div className="flex flex-col lg:flex-row py-1 px-16 lg:px-16 mb-20 gap-10">
+            <div className="flex flex-col lg:flex-row py-1 px-6 sm:px-16 md:px-16 mb-20 gap-10">
                 <div className="flex flex-col gap-6 flex-1">
                     <h1 className="text-gray-950 font-semibold text-2xl">Programs, Students, and Alumni</h1>
                     <p className="text-gray-500 text-base leading-relaxed">Fakultas Ilmu Komputer Universitas Sriwijaya menawarkan beragam program akademik yang dirancang untuk mencetak inovator dan pemimpin masa depan di bidang Teknologi Informasi dan Komunikasi.</p>
