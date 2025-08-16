@@ -1,10 +1,15 @@
 package models
 
-import "gorm.io/gorm"
+import (
+	"time"
+
+	"gorm.io/gorm"
+)
 
 type BeritaBaru struct {
 	gorm.Model
-	Cover		string `json:"cover" gorm:"not null"`
- 	Tema      	string `json:"tema" gorm:"not null"`
-	Judul       string `json:"judul" gorm:"not null"`
+	Cover    string    `json:"cover" gorm:"not null"`
+	Tema     string    `json:"tema" gorm:"not null"`
+	Judul    string    `json:"judul" gorm:"not null"`
+	PostedAt time.Time `json:"posted_at"`
 }

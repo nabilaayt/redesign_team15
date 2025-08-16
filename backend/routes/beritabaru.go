@@ -9,4 +9,8 @@ import (
 func BeritaRoutes(api fiber.Router) {
 	berita := api.Group("/berita")
 	berita.Post("/", controllers.CreateBeritaBaru)
+	berita.Get("/", controllers.GetBeritaBaru)
+	berita.Patch("/:id", controllers.UpdateBeritaBaru)     
+	berita.Delete("/:id", controllers.DeleteBeritaBaru) 
 }
+
