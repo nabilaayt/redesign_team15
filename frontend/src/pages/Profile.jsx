@@ -2,6 +2,39 @@ import Footer from "../components/Footer";
 import {fadeIn} from "../utils/variants";
 import { motion } from "motion/react";
 
+const dataMisi = [
+    {
+        id: "01",
+        title: "Mendidik untuk masa depan teknologi",
+        desc: "Menyelenggarakan dan mengembangkan pendidikan tinggi dalam upaya menghasilkan manusia terdidik yang dapat menerapkan dan mengembangkan ilmu pengetahuan bidang informasi, komunikasi dan teknologi."
+    },
+    {
+        id: "02",
+        title: "Riset untuk inovasi berkelanjutan",
+        desc: "Menyelenggarakan dan mengembangkan penelitian dalam  rangka meningkatkan kualitas pembelajaran, ilmu pengetahuan bidang informasi, komunikasi dan teknologi yang memiliki nilai aplikasi dalam pembangunan."
+    },
+    {
+        id: "03",
+        title: "Teknologi untuk kesejahteraan bersama",
+        desc: "Menyelenggarakan dan mengembangkan pengabdian kepada masyarakat dengan menerapkan ilmu pengetahuan  bidang informasi, komunikasi dan teknologi untuk mewujudkan kesejahteraan dan kemajuan masyarakat."
+    },
+    {
+        id: "04",
+        title: "Mengasah potensi, membangun prestasi",
+        desc: "Menyelenggarakan pembinaan dan pengembangan bakat, minat, penalaran, dan kesejahteraan mahasiswa."
+    },
+    {
+        id: "05",
+        title: "Berkolaborasi tanpa batas",
+        desc: "Melaksanakan kerjasama (MOA) dengan lembaga lain, baik nasional maupun internasional."
+    },
+    {
+        id: "06",
+        title: "Profesional, efektif, akuntabel",
+        desc: "Melaksanakan Manajemen administrasi yang modern profesional, efektif, efesien dan akuntabel."
+    },
+]
+
 const Profile = () => {
     return(
         <section id="profile" className="font-poppins">
@@ -83,36 +116,16 @@ const Profile = () => {
                     Misi
                 </h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 max-w-6xl w-full">
-                    <div className="flex flex-col gap-3 justify-start items-center hover:bg-white hover:shadow-lg px-10 py-6 hover:rounded-2xl transition-all duration-300">
-                        <h1 className="text-3xl font-semibold text-gray-950">01</h1>
-                        <h3 className="text-base font-medium text-gray-900 text-center">Mendidik untuk masa depan teknologi</h3>
-                        <p className="text-gray-500 text-sm text-center leading-relaxed">Menyelenggarakan dan mengembangkan pendidikan tinggi dalam upaya menghasilkan manusia terdidik yang dapat menerapkan dan mengembangkan ilmu pengetahuan bidang informasi, komunikasi dan teknologi.</p>
-                    </div>
-                    <div className="flex flex-col gap-3 justify-start items-center hover:bg-white hover:shadow-lg px-10 py-6 hover:rounded-2xl transition-all duration-300">
-                        <h1 className="text-3xl font-semibold text-gray-950">02</h1>
-                        <h3 className="text-base font-medium text-gray-900 text-center">Riset untuk inovasi berkelanjutan</h3>
-                        <p className="text-gray-500 text-sm text-center leading-relaxed">Menyelenggarakan dan mengembangkan penelitian dalam  rangka meningkatkan kualitas pembelajaran, ilmu pengetahuan bidang informasi, komunikasi dan teknologi yang memiliki nilai aplikasi dalam pembangunan.</p>
-                    </div>
-                    <div className="flex flex-col gap-3 justify-start items-center hover:bg-white hover:shadow-lg px-10 py-6 hover:rounded-2xl transition-all duration-300">
-                        <h1 className="text-3xl font-semibold text-gray-950">03</h1>
-                        <h3 className="text-base font-medium text-gray-900 text-center">Teknologi untuk kesejahteraan bersama</h3>
-                        <p className="text-gray-500 text-sm text-center leading-relaxed">Menyelenggarakan dan mengembangkan pengabdian kepada masyarakat dengan menerapkan ilmu pengetahuan  bidang informasi, komunikasi dan teknologi untuk mewujudkan kesejahteraan dan kemajuan masyarakat.</p>
-                    </div>
-                    <div className="flex flex-col gap-3 justify-start items-center hover:bg-white hover:shadow-lg px-10 py-6 hover:rounded-2xl transition-all duration-300">
-                        <h1 className="text-3xl font-semibold text-gray-950">04</h1>
-                        <h3 className="text-base font-medium text-gray-900 text-center">Mengasah potensi, membangun prestasi</h3>
-                        <p className="text-gray-500 text-sm text-center leading-relaxed">Menyelenggarakan pembinaan dan pengembangan bakat, minat, penalaran, dan kesejahteraan mahasiswa. </p>
-                    </div>
-                    <div className="flex flex-col gap-3 justify-start items-center hover:bg-white hover:shadow-lg px-10 py-6 hover:rounded-2xl transition-all duration-300">
-                        <h1 className="text-3xl font-semibold text-gray-950">05</h1>
-                        <h3 className="text-base font-medium text-gray-900 text-center">Berkolaborasi tanpa batas</h3>
-                        <p className="text-gray-500 text-sm text-center leading-relaxed">Melaksanakan kerjasama (MOA) dengan lembaga lain, baik nasional maupun internasional. </p>
-                    </div>
-                    <div className="flex flex-col gap-3 justify-start items-center hover:bg-white hover:shadow-lg px-10 py-6 hover:rounded-2xl transition-all duration-300">
-                        <h1 className="text-3xl font-semibold text-gray-950">06</h1>
-                        <h3 className="text-base font-medium text-gray-900 text-center">Profesional, efektif, akuntabel</h3>
-                        <p className="text-gray-500 text-sm text-center leading-relaxed">Melaksanakan Manajemen administrasi yang modern profesional, efektif, efesien dan akuntabel. </p>
-                    </div>
+                    {dataMisi.map(({ id, title, desc }) => (
+                        <div 
+                            key={id}
+                            className="flex flex-col gap-3 justify-start items-center hover:bg-white hover:shadow-lg px-10 py-6 hover:rounded-2xl transition-all duration-300"
+                        >
+                        <h2 className="text-3xl font-semibold text-gray-950">{id}</h2>
+                        <h3 className="text-base font-medium text-gray-900 text-center">{title}</h3>
+                        <p className="text-gray-500 text-sm text-center leading-relaxed">{desc}</p>
+                        </div>
+                    ))}
                 </div>
             </motion.div>
 
