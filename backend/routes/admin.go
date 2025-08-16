@@ -9,8 +9,8 @@ import (
 
 func AdminRoutes(api fiber.Router) {
 	admin := api.Group("/admin")
-	admin.Post("/signup", middlewares.Auth, controllers.SignUp)
+	admin.Post("/signup", controllers.SignUp)
 	admin.Post("/login", controllers.Login)
-	admin.Post("/sync-berita", middlewares.Auth, controllers.SyncBeritaCache)
-	admin.Post("/logout", middlewares.Auth, controllers.Logout)
+	admin.Post("/logout", middleware.Auth, controllers.Logout)
+	admin.Post("/sync-berita", middleware.Auth, controllers.SyncBeritaCache)
 }
