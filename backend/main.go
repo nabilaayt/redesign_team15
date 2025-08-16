@@ -14,7 +14,8 @@ func main() {
 	database.DBMigrate()
 
 	app := fiber.New()
-
+	app.Static("/assets", "./assets")
+	
 	routes.MainRoutes(app)
 
 	app.Listen(":8080")
