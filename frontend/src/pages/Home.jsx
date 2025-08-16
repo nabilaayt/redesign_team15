@@ -117,18 +117,12 @@ const Home = () => {
             </motion.div>
 
             {/* Section Fasilkom Student Organizations */}
-            <motion.div id="organizations" 
-            variants={fadeIn("up", 0.2)}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.7 }}
-
-            className="flex flex-col mb-10 justify-center text-center items-center py-10 px-6 sm:px-16 md:px-16">
+            <div id="organizations" className="flex flex-col mb-10 justify-center text-center items-center py-10 px-6 sm:px-16 md:px-16">
                 <h1 className="text-gray-950 font-semibold text-2xl mb-8">Fasilkom Student Organizations</h1>
                 <div className="w-full mx-auto flex justify-center items-center mb-10 overflow-x-hidden">
                     <ListOrganization/>
                 </div>
-            </motion.div>
+            </div>
 
             {/* Footer */}
             <Footer />
