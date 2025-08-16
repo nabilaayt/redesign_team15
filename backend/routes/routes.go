@@ -6,5 +6,6 @@ func MainRoutes(app *fiber.App) {
 	api := app.Group("/api")
 	BeritaRoutes(api)
 	BeritaMahasiswaRoutes(api)
+	fileRoutes(api)
 	AdminRoutes(api)
 }

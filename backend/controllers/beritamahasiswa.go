@@ -135,11 +135,7 @@ func UpdateBeritaMahasiwa(c *fiber.Ctx) error {
 
 func DeleteBeritaMahasiswa(c *fiber.Ctx) error {
 	id := c.Params("id")
-	if id == "" {
-		return c.Status(fiber.StatusBadRequest).JSON(fiber.Map{
-			"error": "ID berita is required",
-		})
-	}
+	
 	var BeritaNewMahasiswa models.BeritaMahasiswa
 
 	if err := database.DB.First(&BeritaNewMahasiswa, id).Error; err != nil {

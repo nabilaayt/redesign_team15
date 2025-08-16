@@ -28,7 +28,7 @@ func DBinit() {
 }
 
 func DBMigrate() {
-	if err := DB.AutoMigrate(&models.BeritaBaru{}, &models.BeritaMahasiswa{}, &models.Admin{}); 
+	if err := DB.AutoMigrate(&models.BeritaBaru{}, &models.BeritaMahasiswa{}, &models.File{}, &models.Admin{}); 
 	err != nil {
 		fmt.Println("Failed to migrate", err)
 	}
