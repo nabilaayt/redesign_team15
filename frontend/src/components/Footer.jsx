@@ -49,12 +49,18 @@ const Footer = () => {
                     <h3 className="text-2xl font-medium text-white">Navigation</h3>
                     <ul className="flex flex-col gap-4">
                         <li className="text-white text-lg hover:font-medium">
-                            <NavLink to={"/"}>
+                            <NavLink 
+                            to="/"
+                            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                            >
                                 Home
                             </NavLink>
                         </li>
                         <li className="text-white text-lg hover:font-medium">
-                            <NavLink to={"/profile"}>
+                            <NavLink 
+                            to="/profile"
+                            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                            >
                                 Profile
                             </NavLink>
                         </li>
