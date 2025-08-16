@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"fmt"
 	"strconv"
+	"team15gdg/cache"
 	"team15gdg/database"
 	"team15gdg/models"
 	"team15gdg/utils"
@@ -54,6 +54,14 @@ func GetBeritaBaru(c *fiber.Ctx) error {
 
 	limit := c.Query("limit")
 	query := database.DB.Model(&models.BeritaBaru{}).Where("posted_at <= ?", time.Now()).Order("posted_at DESC")
+	cacheKey := "berita_all"
+
+	if cached, found := cache.GetBeritaCache(cacheKey); found {
+		return c.Status(fiber.StatusOK).JSON(fiber.Map{
+			"berita": cached,
+			"cache":  true,
+		})
+	}
 
 	if limit != "" {
 		if limitInt, err := strconv.Atoi(limit); err == nil {
@@ -67,14 +75,16 @@ func GetBeritaBaru(c *fiber.Ctx) error {
 		})
 	}
 
+	cache.SetBeritaCache(cacheKey, BeritaNew)
+
 	return c.Status(200).JSON(fiber.Map{
 		"berita": BeritaNew,
+		"cache":  false,
 	})
 }
 
 func UpdateBeritaBaru(c *fiber.Ctx) error {
 	id := c.Params("id")
-	fmt.Println("Update ID:", id)
 	var BeritaNew models.BeritaBaru
 
 	if err := database.DB.First(&BeritaNew, id).Error; err != nil {
