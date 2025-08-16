@@ -24,12 +24,18 @@ const Navbar = () => {
 
                 <ul className="hidden lg:flex font-normal gap-10 text-base">
                     <li className="transition-all text-gray-500 cursor-pointer hover:text-amber-400 hover:font-medium hover:underline hover:underline-offset-6">
-                        <NavLink to={"/"}>
+                        <NavLink 
+                        to="/"
+                        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                        >
                             Home
                         </NavLink>
                     </li>
                     <li className="transition-all text-gray-500 cursor-pointer hover:text-amber-400 hover:font-medium hover:underline hover:underline-offset-6">
-                        <NavLink to={"/profile"}>
+                        <NavLink 
+                        to="/profile"
+                        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                        >
                             Profile
                         </NavLink>
                     </li>
