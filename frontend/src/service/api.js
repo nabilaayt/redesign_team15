@@ -38,35 +38,6 @@ export const getBeritaMhs = async () => {
 }
 
 // File
-// export const getFile = async () => {
-//     try {
-//         const res = await fetch("http://127.0.0.1:8080/api/file?limit=2&is_priority=true");
-//         const data = await res.json();
-//         console.log("API FILE RESPONSE:", data); 
-
-//         return data.file || [];
-//     } catch (error) {
-//         console.error("Error fetching file:", error);
-//         return [];
-//     }
-
-//     // const res = await fetch("http://127.0.0.1:8080/api/file?limit=2&is_priority=true");
-//     // const data = await res.json();
-
-//     // console.log("API FILE RESPONSE:", data); //
-
-//     // return data.files.map((item) => ({
-//     //     title: item.nama_file,
-//     //     description: item.keterangan,
-//     //     tanggal: new Date(item.uploaded_at).toLocaleDateString("id-ID", {
-//     //         year: "numeric",
-//     //         month: "short",
-//     //         day: "numeric",
-//     //     }),
-//     //     fileUrl: `http://127.0.0.1:8080/assets/files/${item.url}`,
-//     // }));
-// }
-
 export const getFile = async () => {
     try {
         const res = await fetch("http://127.0.0.1:8080/api/file?limit=2&is_priority=true");
