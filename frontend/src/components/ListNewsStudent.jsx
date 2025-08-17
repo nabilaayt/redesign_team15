@@ -37,27 +37,18 @@ const ListNewsStudent = () => {
     }, []);
 
     return(
-        <section id="newsStudents" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-stretch gap-14">
+        <section id="newsStudents" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-stretch gap-14">
             {newsMhs.map((news, index) => {
                 console.log(news);
                 return (
                     <StudentCard 
                         key={index}
-                        cover={news.images}
+                        cover={news.imageUrl}
                         title={news.title}
                         category={news.description}
                     />
                 );
             })}
-
-            {/* {dummyNewsStudents.map((news) => (
-                <StudentCard
-                    key={news.id}
-                    title={news.title}
-                    category={news.category}
-                    cover={news.images}
-                />
-            ))} */}
         </section>
     );
 }

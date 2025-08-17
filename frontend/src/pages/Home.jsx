@@ -1,6 +1,7 @@
 import ListNewsStudent from "../components/ListNewsStudent";
 import ListNewsInfo from "../components/ListNewsInfo";
 import ListOrganization from "../components/ListOrganization";
+import DownloadFile from "../components/DownloadFile";
 import Footer from "../components/Footer";
 import {fadeIn} from "../utils/variants";
 import { motion } from "motion/react";
@@ -36,25 +37,7 @@ const Home = () => {
                 <p className="text-base text-gray-500 mt-8 text-wrap">
                     Fakultas Ilmu Komputer UNSRI saat ini telah mampu menjadikan dirinya menjadi salah satu Fakultas yang Unggul di Universitas Sriwijaya serta mendukung pembangunan dan pendidikan IPTEK di Sumatra Selatan.
                 </p>
-                <div className="flex relative flex-col py-15 gap-4">
-                    <h2 className="text-gray-500">Download Document</h2>
-                    <div className="flex flex-col sm:flex-row gap-3 flex-wrap">
-                        <a 
-                            href="#" 
-                            download
-                            className="bg-amber-400 text-base whitespace-nowrap w-fit font-medium text-white hover:border hover:outline-amber-400 hover:outline-2 hover:bg-white hover:text-amber-400 px-5 py-3 rounded-full"
-                        >
-                            SOP PPT Fasilkom
-                        </a>
-                        <a 
-                            href="#" 
-                            download
-                            className="bg-white border whitespace-nowrap w-fit outline-amber-400 outline-2 text-base font-medium text-amber-400 hover:bg-amber-400 hover:text-white hover:outline-none px-5 py-3 rounded-full"
-                        >
-                            Akreditasi UNSRI
-                        </a>
-                    </div>
-                </div>
+                <DownloadFile />
             </motion.div>
 
             {/* Section News Information */}
